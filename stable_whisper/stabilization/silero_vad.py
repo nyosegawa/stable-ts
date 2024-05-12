@@ -20,7 +20,9 @@ def load_silero_vad_model(onnx=False, verbose: Optional[bool] = False, cache: bo
                                   model='silero_vad',
                                   verbose=verbose,
                                   onnx=onnx,
-                                  trust_repo=True)
+                                  trust_repo=True,
+                                  skip_validation=True
+                                 )
     get_ts = utils[0]
     if model_cache is not None:
         model_cache[onnx] = (model, get_ts)
